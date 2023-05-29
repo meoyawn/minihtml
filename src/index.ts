@@ -75,8 +75,7 @@ const pruneHTML = (fragment: string, opts: Options | undefined): string => {
     return !toPrune(el)
   })
 
-  if (!filtered) return ""
-  return toHtml(filtered)
+  return filtered ? toHtml(filtered) : ""
 }
 
 interface Options {
