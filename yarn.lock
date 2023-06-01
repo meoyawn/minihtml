@@ -243,9 +243,9 @@
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
 "@ianvs/prettier-plugin-sort-imports@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@ianvs/prettier-plugin-sort-imports/-/prettier-plugin-sort-imports-4.0.0.tgz#ea2eeb4024b83cb65a762f0202220c37a2211cbf"
-  integrity sha512-56wYZhq/Ezt5o4Lzc+CEUV+sqTPEV2WcTFJSSLBOhe15yfIkrUheGeRvC3lg30VQ8K0J1kvWjXIY5lxeOlW2Tg==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@ianvs/prettier-plugin-sort-imports/-/prettier-plugin-sort-imports-4.0.1.tgz#f1856595f3eee8f8f9471ca6533ab6cb730a1095"
+  integrity sha512-xFpOSzroyJRSxgJSNc3beLIrRgrCzh8TjtFL7iPFyX7VMR57jsnPieKIctAehbWST4Z3uHKAd1iLrSWBf9rILQ==
   dependencies:
     "@babel/core" "^7.21.8"
     "@babel/generator" "^7.21.5"
@@ -527,9 +527,9 @@ browserslist@^4.21.3:
     update-browserslist-db "^1.0.11"
 
 bun-types@^0.6.4:
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-0.6.5.tgz#84b81a9eb8461fe24e79525157c3dfb64779a6ba"
-  integrity sha512-XH/8Usb8leo5cZgMJGvqk8bfm9v60LnkaUrOK7bVrfWxH/ezqTWYfmyUCGhoD1jdUlURxqzLRpLGkMs3MAgSYw==
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-0.6.6.tgz#d8811b175eb7dfcd792fad7789bab489d9e97983"
+  integrity sha512-/LL3zPv7d+ZvHSD6TIhVB7l8h1rrMvuGlwILTGHrJJeAaHKq+7RgIV6N8A8kzhkYMFuTq9o2P/2o8gUL7RHtzg==
 
 bundle-name@^3.0.0:
   version "3.0.0"
@@ -552,9 +552,9 @@ camel-case@^3.0.0:
     upper-case "^1.1.1"
 
 caniuse-lite@^1.0.30001489:
-  version "1.0.30001489"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001489.tgz#ca82ee2d4e4dbf2bd2589c9360d3fcc2c7ba3bd8"
-  integrity sha512-x1mgZEXK8jHIfAxm+xgdpHpk50IN3z3q3zP261/WS+uvePxW8izXuCu6AHz0lkuYTlATDehiZ/tNyYBdSQsOUQ==
+  version "1.0.30001492"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001492.tgz#4a06861788a52b4c81fd3344573b68cc87fe062b"
+  integrity sha512-2efF8SAZwgAX1FJr87KWhvuJxnGJKOnctQa8xLOskAXNXq8oiuqgl6u1kk3fFpsp3GgvzlRjiK1sl63hNtFADw==
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -708,9 +708,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 electron-to-chromium@^1.4.411:
-  version "1.4.411"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.411.tgz#8cb7787f0442fcb4209590e9951bdb482caa93b2"
-  integrity sha512-5VXLW4Qw89vM2WTICHua/y8v7fKGDRVa2VPOtBB9IpLvW316B+xd8yD1wTmLPY2ot/00P/qt87xdolj4aG/Lzg==
+  version "1.4.416"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.416.tgz#7291f704168d3842ae4da3ae9fdc7bfbeb97d116"
+  integrity sha512-AUYh0XDTb2vrj0rj82jb3P9hHSyzQNdTPYWZIhPdCOui7/vpme7+HTE07BE5jwuqg/34TZ8ktlRz6GImJ4IXjA==
 
 entities@^4.4.0:
   version "4.5.0"
