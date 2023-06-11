@@ -1,34 +1,32 @@
-import { html as langHTML } from "@codemirror/lang-html"
+import { html } from "@codemirror/lang-html"
 import ReactCodeMirror from "@uiw/react-codemirror"
 import React, { useEffect, useState, type JSX } from "react"
 import { pruneHtmlToPug } from "../../../minihtml/src/index"
 import { defaultHTML } from "./defaulthtml"
 
 export function SplitEditor(): JSX.Element {
-  const [html, setHTML] = useState(defaultHTML)
-  const [pug, setPug] = useState("")
+  const [htmlCode, setHtmlCode] = useState(defaultHTML)
+  const [pugCode, setPugCode] = useState("")
 
   useEffect(() => {
     try {
-      setPug(pruneHtmlToPug(html))
+      setPugCode(pruneHtmlToPug(htmlCode))
     } catch (e) {
-      setPug("")
+      setPugCode("")
     }
-  }, [html])
+  }, [htmlCode])
 
   return (
-    <div className="flex h-screen w-full flex-row">
+    <div className="flex h-[95vh] w-full flex-row">
       <ReactCodeMirror
-        extensions={[langHTML()]}
-        minHeight={"200px"}
-        className=" w-1/2 overflow-auto"
-        value={html}
-        onChange={setHTML}
+        extensions={[html()]}
+        className="w-1/2 overflow-auto"
+        value={htmlCode}
+        onChange={setHtmlCode}
       />
       <ReactCodeMirror
-        minHeight={"200px"}
-        className=" w-1/2 overflow-auto"
-        value={pug}
+        className="w-1/2 overflow-auto"
+        value={pugCode}
         readOnly
       />
     </div>

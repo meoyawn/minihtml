@@ -10,5 +10,18 @@ export const meta: V2_MetaFunction = () => {
 }
 
 export default function Index(): JSX.Element {
-  return <SplitEditor />
+  return (
+    <div>
+      <a
+        className="flex h-[5vh] w-full flex-shrink-0 items-center px-8 text-lg font-medium text-blue-600 underline"
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/meoyawn/minihtml"
+      >
+        Compress HTML for LLMs
+      </a>
+
+      <SplitEditor />
+    </div>
+  )
 }
