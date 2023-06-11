@@ -1,5 +1,4 @@
-import type { LinksFunction } from "@remix-run/cloudflare";
-import { cssBundleHref } from "@remix-run/css-bundle";
+import type { LinksFunction } from "@remix-run/cloudflare"
 import {
   Links,
   LiveReload,
@@ -7,12 +6,14 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from "@remix-run/react"
+import tailwindCSS from "/tailwind.css"
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+  { rel: "stylesheet", href: tailwindCSS },
+]
 
+// noinspection JSUnusedGlobalSymbols
 export default function App() {
   return (
     <html lang="en">
@@ -22,6 +23,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
+
       <body>
         <Outlet />
         <ScrollRestoration />
@@ -29,5 +31,5 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
-  );
+  )
 }
