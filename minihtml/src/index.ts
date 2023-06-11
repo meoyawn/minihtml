@@ -35,8 +35,8 @@ const toPrune = ({ children, properties, tagName }: Element): boolean => {
   }
 }
 
-const behavioralAttrs: ReadonlyArray<string> = [
-  // "className", added by options by default, but can be turned off
+const commonAttrs: ReadonlyArray<string> = [
+  // "className", see Options.keepClasses
   "tabIndex",
   "src",
   "srcSet",
@@ -47,15 +47,32 @@ const behavioralAttrs: ReadonlyArray<string> = [
   "target",
   "ariaKeyShortcuts",
   "age",
-  "href",
+  "width",
+  "height",
+  // "href",
 ]
+
+const attrsByTag: Partial<Record<string, ReadonlyArray<string>>> = {
+  time: ["title"],
+}
+
+const remove = (
+  properties: Record<string, unknown>,
+  attrs: ReadonlyArray<string>,
+): void => {
+  for (const attr of attrs) {
+    delete properties[attr]
+  }
+}
 
 const removeAttrs = (el: Node, opts: Options | undefined): Node => {
   if (el.type !== "element") return el
 
   const properties = { ...el.properties }
-  for (const attr of behavioralAttrs) {
-    delete properties[attr]
+  remove(properties, commonAttrs)
+  const forTag = attrsByTag[el.tagName]
+  if (forTag) {
+    remove(properties, forTag)
   }
 
   if (!opts?.keepClasses) {

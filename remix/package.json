@@ -10,7 +10,7 @@
     "chk:test": "bun test",
     "chk:types": "tsc",
     "clean": "rm -rf .cache/ functions/ public/build/",
-    "deploy": "bun chk && bun clean && bun bld && bun pagesDeploy",
+    "deploy": "bun chk && bun clean && bun bld && bun pagesDeploy && say deployed",
     "dev": "NODE_ENV=development remix build && concurrently bun:dev:*",
     "dev:remix": "remix watch",
     "dev:wrangler": "wrangler pages dev ./public --compatibility-date=2023-05-18",

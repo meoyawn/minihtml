@@ -3,3 +3,4 @@ node_modules/
 functions/
 public/build/
 .dev.vars
+app/app/example.html
