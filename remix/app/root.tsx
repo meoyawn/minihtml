@@ -7,14 +7,16 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react"
-import tailwindCSS from "/tailwind.css"
+import React, { type JSX } from "react"
+import tailwindCSS from "./tailwind.css"
 
+// noinspection JSUnusedGlobalSymbols
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwindCSS },
 ]
 
 // noinspection JSUnusedGlobalSymbols
-export default function App() {
+export default function App(): JSX.Element {
   return (
     <html lang="en">
       <head>

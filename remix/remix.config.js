@@ -22,4 +22,5 @@ module.exports = {
   },
   tailwind: true,
   postcss: true,
+  watchPaths: ["../minihtml/src/"],
 }

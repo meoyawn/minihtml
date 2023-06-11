@@ -1,10 +1,9 @@
 import { fromHtml } from "hast-util-from-html"
 import { toHtml } from "hast-util-to-html"
 import { type Element, type Node } from "hast-util-to-html/lib/types"
-/* @ts-ignore no type */
-import html2pug from "html2pug"
 import { filter } from "unist-util-filter"
 import { map } from "unist-util-map"
+import { convert } from "xhtml2pug"
 
 const toPrune = ({ children, properties, tagName }: Element): boolean => {
   if (properties?.ariaHidden) return true
@@ -83,6 +82,5 @@ interface Options {
   keepClasses?: boolean
 }
 
-export const pruneHtmlAsPug = (htmlFragment: string, opts?: Options): string =>
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-  html2pug(pruneHTML(htmlFragment, opts), { fragment: true }) as string
+export const pruneHtmlToPug = (htmlFragment: string, opts?: Options): string =>
+  convert(pruneHTML(htmlFragment, opts))
