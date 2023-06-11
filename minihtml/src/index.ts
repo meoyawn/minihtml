@@ -23,17 +23,16 @@ const toPrune = ({ children, properties, tagName }: Element): boolean => {
     case "source":
       return true
 
-    case "div":
     case "img":
-    case "script":
-    case "a":
-      return Object.keys(properties ?? {}).length === 0 && children.length === 0
+      return !properties?.alt
 
+    case "p":
+    case "div":
     case "span":
       return children.length === 0
 
     default:
-      return false
+      return Object.keys(properties ?? {}).length === 0 && children.length === 0
   }
 }
 
@@ -48,6 +47,8 @@ const behavioralAttrs: ReadonlyArray<string> = [
   "ariaDisabled",
   "target",
   "ariaKeyShortcuts",
+  "age",
+  "href",
 ]
 
 const removeAttrs = (el: Node, opts: Options | undefined): Node => {

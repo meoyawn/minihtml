@@ -1,5 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
+  root: true,
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -7,9 +8,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
   ],
   parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: "tsconfig.json",
-  },
+  parserOptions: { project: "./tsconfig.json" },
   plugins: ["@typescript-eslint"],
   rules: {
     "@typescript-eslint/ban-ts-comment": [

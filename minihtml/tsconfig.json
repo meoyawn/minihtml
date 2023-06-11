@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "types": ["bun-types"],
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+  },
+  "include": ["src/"],
+}

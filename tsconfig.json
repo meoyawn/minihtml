@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "types": ["bun-types"],
     "strict": true,
-    "allowJs": true
-  },
-  "include": ["src/"],
-  "exclude": ["node_modules/"]
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "alwaysStrict": true
+  }
 }
