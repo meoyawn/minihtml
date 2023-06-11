@@ -83,7 +83,9 @@ const removeAttrs = (el: Node, opts: Options | undefined): Node => {
 }
 
 const pruneHTML = (fragment: string, opts: Options | undefined): string => {
-  const mapped = map(fromHtml(fragment), x => removeAttrs(x, opts))
+  const mapped = map(fromHtml(fragment, { fragment: true }), x =>
+    removeAttrs(x, opts),
+  )
 
   const filtered = filter(mapped, { cascade: true }, n => {
     const el = n as Node
@@ -99,5 +101,5 @@ interface Options {
   keepClasses?: boolean
 }
 
-export const pruneHtmlToPug = (htmlFragment: string, opts?: Options): string =>
-  convert(pruneHTML(htmlFragment, opts))
+export const pruneHtmlToPug = (html: string, pruneOpts?: Options): string =>
+  convert(pruneHTML(html, pruneOpts), { parser: "html", bodyLess: true })

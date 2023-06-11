@@ -48,7 +48,7 @@ export const exampleHTML = `<div class="container flex flex-col px-4 pb-6 pt-1 s
         </a>
       </div>
       <button
-        aria-label="menu"
+        title="Mobile menu"
         class="-mr-2 flex h-12 w-12 items-center justify-center rounded-md p-3 text-gray-400 duration-200 hover:bg-gray-700 hover:text-white sm:hidden"
       >
         <svg
