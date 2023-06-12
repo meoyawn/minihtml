@@ -20,6 +20,8 @@ const toPrune = ({ children, properties, tagName }: Element): boolean => {
   switch (tagName) {
     case "svg":
     case "source":
+    case "script":
+    case "link":
       return true
 
     case "img":
@@ -82,8 +84,8 @@ const removeAttrs = (el: Node, opts: Options | undefined): Node => {
   return { ...el, properties }
 }
 
-const pruneHTML = (fragment: string, opts: Options | undefined): string => {
-  const mapped = map(fromHtml(fragment, { fragment: true }), x =>
+const pruneHTML = (html: string, opts: Options | undefined): string => {
+  const mapped = map(fromHtml(html, { fragment: !html.includes("<html") }), x =>
     removeAttrs(x, opts),
   )
 
