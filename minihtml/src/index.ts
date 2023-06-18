@@ -27,6 +27,7 @@ const toPrune = ({ children, properties, tagName }: Element): boolean => {
     case "img":
       return !properties?.alt
 
+    case "font":
     case "p":
     case "div":
     case "span":
@@ -52,6 +53,9 @@ const commonAttrs: ReadonlyArray<string> = [
   "width",
   "height",
   // "href",
+  "style",
+  "size",
+  "face",
 ]
 
 const attrsByTag: Partial<Record<string, ReadonlyArray<string>>> = {
